@@ -7,13 +7,13 @@ const browserSync = require('browser-sync').create();
 // Static Server + watching scss/html files
 function serve() {
   browserSync.init({
-    server: './dist',
+    server: './docs',
     browser: 'safari',
   })
 
   gulp.watch('app/styles/**/*.scss', style)
   gulp.watch('app/*.pug', html)
-  gulp.watch('dist/*.html').on('change', browserSync.reload)
+  gulp.watch('docs/*.html').on('change', browserSync.reload)
 }
 
 // Compile pug into html & auto-inject into browsers
@@ -23,7 +23,7 @@ function html() {
       locals: {},
       pretty: true,
     }))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('docs'))
 };
 
 // Compile sass into CSS & auto-inject into browsers
@@ -31,7 +31,7 @@ function style() {
   return gulp.src('app/styles/*.scss')
     .pipe(sass())
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('dist/assets'))
+    .pipe(gulp.dest('docs/assets'))
     .pipe(browserSync.stream());
 };
 
