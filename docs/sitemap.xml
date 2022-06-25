@@ -8,12 +8,16 @@
 <url>
   <loc>https://klever.space/</loc>
   <lastmod>2022-06-25T02:32:48+00:00</lastmod>
+  <xhtml: link rel='alternate' hreflang='pt-BR' href='https://klever.space/'/>
+  <xhtml: link rel='alternate' hreflanq='en-US' href='https://klever.space/en' />
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://klever.space/en</loc>
   <lastmod>2022-06-25T02:32:48+00:00</lastmod>
-  <priority>0.80</priority>
+  <xhtml: link rel='alternate' hreflanq='en-US' href='https://klever.space/en' />
+  <xhtml: link rel='alternate' hreflang='pt-BR' href='https://klever.space/'/>
+  <priority>1.00</priority>
 </url>
 
 </urlset>
