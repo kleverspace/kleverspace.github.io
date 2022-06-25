@@ -1,0 +1,64 @@
+block variables
+  - var lang = 'pt-br'
+  - var locale = 'pt_BR'
+  - var current = 'PT'
+  - var description = 'Esse é espaço que faltava para o seu produto desenvolver-se através do design.'
+- var isPT = current == 'PT'
+- var isEN = current == 'EN'
+html(lang=lang)
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width,initial-scale=1')
+    meta(name='description' content=description)
+    //- OPEN GRAPH
+    meta(property='og:title' content='Klever Space')
+    meta(property='og:description' content=description)
+    meta(property='og:url' content='https://klever.space')
+    meta(property='og:image' content='https://klever.space/assets/opengraph.png')
+    meta(property='og:image:type' content='image/png')
+    meta(property='og:image:width' content='600')
+    meta(property='og:image:height' content='600')
+    meta(property='og:site_name' content='Klever Space')
+    meta(property='og:type' content='website')
+    meta(property='og:locale' content=locale)
+    //- FAVICON
+    meta(name='apple-mobile-web-app-title' content='Klever Space')
+    meta(name='application-name' content='Klever Space')
+    meta(name='msapplication-TileColor' content='#0072c3')
+    meta(name='msapplication-config' content='/assets/browserconfig.xml')
+    meta(name='theme-color' content='#0072c3')
+    link(rel='apple-touch-icon' sizes='180x180' href='/assets/apple-touch-icon.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='/assets/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='/assets/favicon-16x16.png')
+    link(rel='manifest' href='/assets/site.webmanifest')
+    link(rel='mask-icon' href='/assets/safari-pinned-tab.svg' color='#0072c3')
+    link(rel='shortcut icon' href='/assets/favicon.ico')
+    //- DEFAULT
+    link(rel='stylesheet' href='assets/main.css')
+    title Klever Space
+  body
+    .wrapper
+      header.row.middle-xs
+        .col-xs-6
+          svg(title='Klever Space' width='3rem' height='3rem' viewbox='0 0 512 512' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink')
+            path(fill='#FFFFFF' d='M256,256 L512,512 L0,512 L0,256 L256,256 Z M512,0 L256,256 L256,0 L512,0 Z M256,0 L0,256 L0,0 L256,0 Z')
+        nav.col-xs-6
+          block nav
+            a(href='.' title='Página em Português 🇧🇷' lang='pt-br' aria-current=isPT ? 'page' : 'false') PT
+            a(href='./en' title='Page in English 🇺🇸' lang='en' aria-current=isEN ? 'page' : 'false') EN
+      .row
+        .col-xs-12.col-md-4
+          h1(title='Klever Space') klever
+            i space
+          block content
+            p Não há limites quando se tem vontade de transformar problemas em 
+              i soluções.
+            p Esse é espaço que faltava para o seu 
+              i produto 
+              | desenvolver-se através do 
+              i design.
+            ul
+              li
+                a(href='https://janklever.com.br' target='_blank' title='Jan Klever – Site') Conhecer quem está por trás
+              li
+                a(href='mailto:jan@klever.space' target='_blank' title='Mande um e-mail') Entrar em contato

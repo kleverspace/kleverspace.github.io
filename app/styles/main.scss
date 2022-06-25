@@ -1,0 +1,95 @@
+// IMPORTS
+@import 'normalize', 'grid';
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+// COLORS
+$blue: #0072C3;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-family: 'Space Mono', monospace;
+  background-color: $blue;
+  color: white;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: white;
+  margin: 0 0 1.5rem;
+  
+  i {
+    font-weight: normal;
+    font-style: italic;
+  }
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1;
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+ul {
+  margin-top: 3rem;
+  list-style: none;
+  padding: 0;
+
+  li:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    font-size: 1rem;
+    list-style: 1.5;
+  }
+}
+
+a {
+  font-weight: bold;
+  text-decoration: underline;
+  color: inherit;
+
+  &:hover {
+    opacity: .5;
+  }
+}
+
+[aria-current='page'] {
+  pointer-events: none;
+  cursor: default;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+header {
+  padding: 4rem 0 2rem;
+}
+
+nav {
+  text-align: right;
+
+  a {
+    font-size: .875rem;
+    letter-spacing: 2px;
+    line-height: 1.5rem;
+    padding: .5rem .75rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+
+    &:hover {
+      background-color: white;
+      color: $blue;
+      opacity: 1;
+    }
+  }
+}
