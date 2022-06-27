@@ -1,3 +1,5 @@
+// USES
+@use 'sass:math';
 // IMPORTS
 @import 'normalize', 'grid';
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -79,11 +81,13 @@ nav {
   text-align: right;
 
   a {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    text-align: center;
     font-size: .875rem;
-    letter-spacing: 2px;
-    line-height: 1.5rem;
-    padding: .5rem .75rem;
-    color: rgba(255, 255, 255, 0.5);
+    line-height: 2rem;
+    color: white;
     text-decoration: none;
 
     &:hover {
